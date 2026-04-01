@@ -1,5 +1,5 @@
 {
   "name": "Code2PDF - Multi-File Context Merger",
-  "description": "Convert multiple code and text files into a single, well-formatted PDF for AI context sharing.",
+  "description": "Convert multiple code and text files into a single, well-formatted PDF with index and pagination.",
   "requestFramePermissions": []
 }

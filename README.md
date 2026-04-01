@@ -1,20 +1,32 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Code2PDF
 
-# Run and deploy your AI Studio app
+Code2PDF is a client-side React app that merges multiple code/text files into one structured PDF focused on fast generation and readability.
 
-This contains everything you need to run your app locally.
+## Features
 
-View your app in AI Studio: https://ai.studio/apps/4dab16d8-5fb2-4231-93ca-55254dfeddc0
+- Drag and drop multiple files.
+- Reorder and remove files before export.
+- Export mode selector: `Rapido` (with formatting) or `Fiel al origen`.
+- Fast generation for large files with line numbering and pagination.
+- Cover page and file index in the generated PDF.
+- Local processing in the browser (no file upload to external servers).
 
-## Run Locally
+## Supported file extensions
 
-**Prerequisites:**  Node.js
+`.txt`, `.md`, `.ts`, `.tsx`, `.js`, `.jsx`, `.html`, `.css`, `.php`, `.json`
 
+## Run locally
+
+Prerequisite: Node.js 20+
 
 1. Install dependencies:
+
    `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
+
+2. Start the dev server:
+
    `npm run dev`
+
+3. Build for production:
+
+   `npm run build`

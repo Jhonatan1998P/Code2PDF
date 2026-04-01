@@ -48,8 +48,8 @@ export default function FileUpload({ onFilesAdded }: FileUploadProps) {
       className={cn(
         "relative group cursor-pointer border-2 border-dashed rounded-2xl p-8 transition-all duration-300 flex flex-col items-center justify-center gap-4",
         isDragging 
-          ? "border-blue-500 bg-blue-50/50" 
-          : "border-gray-200 hover:border-blue-400 hover:bg-gray-50/50"
+          ? "border-blue-500 bg-blue-50/50 dark:bg-blue-950/20" 
+          : "border-gray-200 hover:border-blue-400 hover:bg-gray-50/50 dark:border-slate-700 dark:hover:border-blue-400 dark:hover:bg-slate-800/60"
       )}
     >
       <input
@@ -58,22 +58,24 @@ export default function FileUpload({ onFilesAdded }: FileUploadProps) {
         onChange={handleFileInputChange}
         className="hidden"
         multiple
-        accept=".txt,.md,.tsx,.js,.html,.css,.php,.ts"
+        accept=".txt,.md,.tsx,.jsx,.js,.html,.css,.php,.ts,.json"
       />
       
       <div className={cn(
         "w-16 h-16 rounded-full flex items-center justify-center transition-transform duration-300",
-        isDragging ? "scale-110 bg-blue-100 text-blue-600" : "bg-gray-100 text-gray-400 group-hover:text-blue-500 group-hover:bg-blue-50"
+        isDragging
+          ? "scale-110 bg-blue-100 text-blue-600 dark:bg-blue-900/40"
+          : "bg-gray-100 text-gray-400 group-hover:text-blue-500 group-hover:bg-blue-50 dark:bg-slate-800 dark:text-slate-400 dark:group-hover:bg-slate-700"
       )}>
         <Upload className="w-8 h-8" />
       </div>
 
       <div className="text-center">
-        <p className="text-lg font-medium text-gray-700">
+        <p className="text-lg font-medium text-gray-700 dark:text-slate-100">
           {isDragging ? "Suelta los archivos aquí" : "Arrastra y suelta tus archivos aquí"}
         </p>
-        <p className="text-sm text-gray-500 mt-1">
-          Soporta .txt, .md, .tsx, .js, .html, .css, .php, .ts
+        <p className="text-sm text-gray-500 mt-1 dark:text-slate-300">
+          Soporta .txt, .md, .tsx, .jsx, .js, .html, .css, .php, .ts, .json
         </p>
       </div>
 
